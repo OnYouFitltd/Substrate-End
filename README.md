@@ -6,7 +6,7 @@
 
 - Registering  of Products and Services
 - Mark Product/Service as Inactive, can be coded in the frontend to have the product removed from catalouge
-- Buy service/product and transfer Utility Token keep details stored on the blockchain. 
+- Buy service/product and transfer Utility Token keep details stored on the blockchain. 🚀:
 
  - - - - 
 
