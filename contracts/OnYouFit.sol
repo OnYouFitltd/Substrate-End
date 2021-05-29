@@ -1,6 +1,6 @@
 pragma solidity ^0.7.4;
 
-contract Sanskriti {
+contract OnYouFit {
   // INSERT struct Product
   struct Product {
   string name;
@@ -98,7 +98,7 @@ function listProduct(string memory name, string memory description,string memory
   function _sendFunds (address beneficiary, uint256 value) internal {
     // address(uint160()) is a weird solidity quirk
     // Read more here: https://solidity.readthedocs.io/en/v0.5.10/050-breaking-changes.html?highlight=address%20payable#explicitness-requirements
-    address(uint160(beneficiary)).transfer(value);
+    address payable(uint160(beneficiary)).transfer(value);
   }
 
   function _createBuyin(uint256 _productId, uint256 quantity, string calldata _pmode) internal {
