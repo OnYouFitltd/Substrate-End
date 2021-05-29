@@ -1,0 +1,7 @@
+impl evm::Trait for Runtime {
+	type FeeCalculator = FixedGasPrice;
+	type ConvertAccountId = HashTruncateConvertAccountId<Blake2Hasher>;
+	type Currency = Balances;
+	type Event = Event;
+	type Precompiles = ();
+}
