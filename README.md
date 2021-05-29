@@ -1,18 +1,14 @@
-# Substrate Node Template
+# OnYouFit Substrate Backend
 
-[![Try on playground](https://img.shields.io/badge/Playground-Node_Template-brightgreen?logo=Parity%20Substrate)](https://playground.substrate.dev/?deploy=node-template)
+## **Updates:**
 
-A fresh FRAME-based [Substrate](https://www.substrate.io/) node, ready for hacking :rocket:
+### Added OnYouFit contract (Solidity) that allows:
 
-## Getting Started
+- Registering  of Products and Services
+- Mark Product/Service as Inactive, can be coded in the frontend to have the product removed from catalouge
+- Buy service/product and transfer Utility Token keep details stored on the blockchain. 
 
-Follow the steps below to get started with the Node Template, or get it up and running right from your browser
-in just a few clicks using [Playground](https://playground.substrate.dev/) :hammer_and_wrench:
-
-### Using Nix
-
-Install [nix](https://nixos.org/) and optionally [direnv](https://github.com/direnv/direnv) and [lorri](https://github.com/target/lorri) for a fully plug
-and play experience for setting up the development environment. To get all the correct dependencies activate direnv `direnv allow` and lorri `lorri shell`.
+ - - - - 
 
 ### Rust Setup
 
