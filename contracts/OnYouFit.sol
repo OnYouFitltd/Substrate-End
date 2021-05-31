@@ -1,4 +1,5 @@
-pragma solidity ^0.7.4;
+// SPDX-License-Identifier: MIT
+pragma solidity >0.4.99 <0.6.0;
 
 contract OnYouFit {
   // INSERT struct Product
@@ -70,7 +71,7 @@ function listProduct(string memory name, string memory description,string memory
    * @param _productId id of the product to rent out
    * @param _pmode id of the product to rent out
    */
-  function buyProduct(uint256 _productId, uint256 quantity, string calldata _pmode) public payable{
+  function buyProduct(uint256 _productId, uint256 quantity, string memory _pmode) public payable{
     // Retrieve `product` object from the storage
     Product storage product = products[_productId];
 
@@ -95,13 +96,13 @@ function listProduct(string memory name, string memory description,string memory
     
   }
 
-  function _sendFunds (address beneficiary, uint256 value) internal {
-    // address(uint160()) is a weird solidity quirk
-    // Read more here: https://solidity.readthedocs.io/en/v0.5.10/050-breaking-changes.html?highlight=address%20payable#explicitness-requirements
-    address payable(uint160(beneficiary)).transfer(value);
-  }
+   function _sendFunds (address beneficiary, uint256 value) internal {
+     // address(uint160()) is a weird solidity quirk
+     // Read more here: https://solidity.readthedocs.io/en/v0.5.10/050-breaking-changes.html?highlight=address%20payable#explicitness-requirements
+     address (uint160(beneficiary)).transfer(value);
+   }
 
-  function _createBuyin(uint256 _productId, uint256 quantity, string calldata _pmode) internal {
+  function _createBuyin(uint256 _productId, uint256 quantity, string memory _pmode) internal {
     // Create a new booking object
     Buyin memory buyin = Buyin({
       productId: _productId,
